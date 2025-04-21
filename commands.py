@@ -1,11 +1,12 @@
 from openai import OpenAI
 
-openai_client = None  # Will be set from main.py
+openai_client = None  # Will be passed in from main.py
 
 def set_openai_client(client):
     global openai_client
     openai_client = client
 
+# !ask
 async def handle_ask(message, user_input):
     try:
         response = openai_client.chat.completions.create(
@@ -17,6 +18,7 @@ async def handle_ask(message, user_input):
     except Exception as e:
         await message.channel.send(f"⚠️ Error: {e}")
 
+# !summarise
 async def handle_summarise(message, text):
     try:
         response = openai_client.chat.completions.create(
@@ -28,6 +30,7 @@ async def handle_summarise(message, text):
     except Exception as e:
         await message.channel.send(f"⚠️ Error: {e}")
 
+# !explaincode
 async def handle_explaincode(message, code):
     try:
         response = openai_client.chat.completions.create(

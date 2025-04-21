@@ -5,10 +5,10 @@ from commands import set_openai_client, handle_ask, handle_summarise, handle_exp
 from keep_alive import keep_alive
 from dotenv import load_dotenv
 
-# Load environment variables (for VS Code)
+# Load environment variables (for VS Code or Replit)
 load_dotenv()
 
-# Replit keep-alive
+# Keep Replit app alive
 keep_alive()
 
 # Get keys

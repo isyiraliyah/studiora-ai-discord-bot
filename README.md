@@ -1,53 +1,63 @@
-# Studiora – My AI Study Bot for Discord
+# Studiora – AI Study Buddy for Discord
 
-Studiora is a Discord bot I built to help students (like me) stay organized and study smarter. It uses OpenAI to answer questions, explain code, summarise notes, and more. I made it for fun, but also to practice using APIs, hosting, and building real tools people can use.
+**Studiora** is a smart and helpful Discord bot I built to assist students with studying, organizing, and staying motivated. It uses the OpenAI API to answer questions, explain code, summarize notes, and run a custom flashcard system.
 
-Right now, the bot runs 24/7 on Replit, and it automatically creates channels for different study features when it joins a new server.
-
----
-
-## What it Can Do
-
-- `!ask` — Ask it anything (school, tech, whatever)
-- `!summarise` — Paste notes or a paragraph and it gives you a quick summary
-- `!explaincode` — Paste code and it explains what it does
-- Auto-creates channels like:
-  - `studybot-chat`
-  - `studyplan` (coming soon)
-  - `flashcards` (coming soon)
-
-More features like `!studyplan` and `!quizme` are coming soon.
+When added to a server, the bot sets up dedicated channels for chatting, flashcards, and saving important content. It's a lightweight, real-world tool I made to sharpen my coding skills and help others at the same time.
 
 ---
 
-## Tech I Used
+## What It Can Do
 
-- Python (main language)
-- Discord.py (for bot features)
+- `!ask <question>` — Ask anything, from schoolwork to life advice
+- `!summarise <text>` — Get quick summaries of notes or paragraphs
+- `!explaincode <code>` — Understand what a block of code does
+- `!motivate` — Get a motivational quote
+- `!quizme question / answer` — Create flashcards
+- `!question` — Receive a random flashcard question
+- `!answer` — Reveal the answer to the last flashcard
+- `!viewcards` — View all saved flashcards
+- `!deletecard <number>` — Delete a specific flashcard
+- React to bot messages to automatically save them in the bookmark channel
+- `!help` — Show all available commands
+
+---
+
+## Auto-Organized Channels
+
+When the bot joins a server, it creates:
+
+- `#studybot-chat` — General interaction with the bot
+- `#quiz-me` — Use all flashcard-related commands here
+- `#bookmark` — Messages you react to will be saved here
+- `#flashcard-deck` — Feed of all flashcards added via `!quizme`
+
+---
+
+## Tech Stack
+
+- Python
+- discord.py (for bot interaction)
 - OpenAI API (for intelligent responses)
-- Replit (for 24/7 hosting)
-- GitHub (for version control and sharing)
+- Replit (used for 24/7 hosting)
+- GitHub (version control)
 
 ---
 
-## How to Run It Yourself
+## How to Run It
 
-If you want to try it:
-
-1. Clone this repo
-2. Add your `DISCORD_TOKEN` and `OPENAI_API_KEY` as environment variables
-   - Either in Replit's Secrets tab or in a local `.env` file
+1. Clone this repository
+2. Add your `DISCORD_TOKEN` and `OPENAI_API_KEY`
+   - Use a `.env` file or Replit Secrets
 3. Run `main.py`
 
-You’ll need a Discord bot account and OpenAI key to get it working.
+You’ll need a Discord bot token and OpenAI API key.
 
 ---
 
 ## Why I Made This
 
-I wanted to create something useful that blends AI, study tools, and real-world coding. As a computer science student, it was a fun way to apply what I’m learning and build something people might actually want to use.
+I wanted to build a project that combined AI, useful study tools, and clean coding practices. As a computer science student, this project helped me put what I’ve learned into something practical and fun to use.
 
 ---
 
-## Built by me – Aliyah  
-*Feel free to fork it or ask questions.*
+## Built by isyiraliyah

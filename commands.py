@@ -1,4 +1,6 @@
 from openai import OpenAI
+from features.motivate import handle_motivate
+from features.quiz import handle_quizme, handle_question, handle_answer
 
 openai_client = None  # Will be passed in from main.py
 
